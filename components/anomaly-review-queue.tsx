@@ -382,9 +382,8 @@ export default function AnomalyReviewQueue() {
               {resolvedAnomalies.map((anomaly) => (
                 <Card
                   key={anomaly.id}
-                  className={`overflow-hidden ${
-                    anomaly.status === "approved" ? "border-l-4 border-l-green-500" : "border-l-4 border-l-red-500"
-                  }`}
+                  className={`overflow-hidden ${anomaly.status === "approved" ? "border-l-4 border-l-green-500" : "border-l-4 border-l-red-500"
+                    }`}
                 >
                   <CardHeader className="pb-2">
                     <div className="flex justify-between">

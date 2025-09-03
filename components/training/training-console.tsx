@@ -226,7 +226,7 @@ export default function TrainingConsole() {
                         size="sm"
                         variant="outline"
                         onClick={() => deleteDocument(doc.id)}
-                        className="border-white/30 hover:bg-white/10 text-[rgba(31,41,55,1)]"
+                        className="border-white/30 hover:bg-white/10 text-white"
                       >
                         <Trash2 className="h-4 w-4" />
                       </Button>
@@ -356,7 +356,7 @@ export default function TrainingConsole() {
                         size="sm"
                         variant="outline"
                         onClick={() => deleteExample(example.id)}
-                        className="border-white/30 hover:bg-white/10 text-black"
+                        className="border-white/30 hover:bg-white/10 text-white"
                       >
                         <Trash2 className="h-4 w-4" />
                       </Button>

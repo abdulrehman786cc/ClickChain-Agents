@@ -113,27 +113,22 @@ export default function IssueDetailPanel({ issue, onClose, onApprove, onReject }
     <Dialog open={true} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden">
         <DialogHeader>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <Avatar className="h-10 w-10">
-                <AvatarImage src={issue.employeeAvatar || "/placeholder.svg"} alt={issue.employeeName} />
-                <AvatarFallback>
-                  {issue.employeeName
-                    .split(" ")
-                    .map((n) => n[0])
-                    .join("")}
-                </AvatarFallback>
-              </Avatar>
-              <div>
-                <DialogTitle className="text-xl">{issue.employeeName}</DialogTitle>
-                <DialogDescription>
-                  Issue ID: {issue.id} • Employee ID: {issue.employeeId}
-                </DialogDescription>
-              </div>
+          <div className="flex items-center gap-3">
+            <Avatar className="h-10 w-10">
+              <AvatarImage src={issue.employeeAvatar || "/placeholder.svg"} alt={issue.employeeName} />
+              <AvatarFallback>
+                {issue.employeeName
+                  .split(" ")
+                  .map((n) => n[0])
+                  .join("")}
+              </AvatarFallback>
+            </Avatar>
+            <div>
+              <DialogTitle className="text-xl">{issue.employeeName}</DialogTitle>
+              <DialogDescription>
+                Issue ID: {issue.id} • Employee ID: {issue.employeeId}
+              </DialogDescription>
             </div>
-            <Button variant="ghost" size="icon" onClick={onClose}>
-              <X className="h-4 w-4" />
-            </Button>
           </div>
         </DialogHeader>
 
@@ -322,7 +317,7 @@ export default function IssueDetailPanel({ issue, onClose, onApprove, onReject }
             <XCircle className="mr-2 h-4 w-4" />
             Reject
           </Button>
-          <Button onClick={handleApproveWithNote}>
+          <Button variant="default" className="bg-blue-600 hover:bg-blue-700 text-white" onClick={handleApproveWithNote}>
             <CheckCircle className="mr-2 h-4 w-4" />
             Approve
           </Button>

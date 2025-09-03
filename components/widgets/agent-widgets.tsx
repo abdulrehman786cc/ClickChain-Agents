@@ -152,13 +152,12 @@ function EmployeeEngagementWidget() {
               {messages.map((message) => (
                 <div
                   key={message.id}
-                  className={`text-sm p-2 rounded ${
-                    message.sender === "Agent"
+                  className={`text-sm p-2 rounded ${message.sender === "Agent"
                       ? "bg-blue-900/30"
                       : message.sender === "Employee"
                         ? "bg-gray-900/30"
                         : "bg-green-900/30"
-                  }`}
+                    }`}
                 >
                   <div className="font-medium text-white">{message.sender}</div>
                   <div className="text-white">{message.content}</div>
@@ -244,7 +243,7 @@ function WorkComplianceWidget() {
               <div key={index} className="p-2 border rounded border-white/30">
                 <div className="flex items-center justify-between mb-1">
                   <span className="text-sm font-medium text-white">{result.document}</span>
-                  <Badge variant="secondary" className="border-white/30 text-black">
+                  <Badge variant="secondary" className="border-white/30 text-white">
                     {Math.round(result.relevance * 100)}%
                   </Badge>
                 </div>
