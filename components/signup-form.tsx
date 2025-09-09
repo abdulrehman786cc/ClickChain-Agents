@@ -170,7 +170,7 @@ export default function SignupForm({ flowType, title, description, buttonText, r
     }
 
     // Default character images based on flow type
-    const defaultCharacterImage = characterImage || (flowType === "talentflow" || flowType === "noah" ? "/Noah.svg" : flowType === "maya" ? "/Emma.svg" : "/Emma.svg")
+    const defaultCharacterImage = characterImage || (flowType === "talentflow" || flowType === "noah" ? "/Noah.svg" : flowType === "maya" ? "/Maya.png" : "/Emma.svg")
     const defaultCharacterAlt = characterAlt || (flowType === "talentflow" || flowType === "noah" ? "Noah - TalentFlow Character" : flowType === "maya" ? "LocalFlow Character" : "Emma - PayFlow Character")
 
     return (

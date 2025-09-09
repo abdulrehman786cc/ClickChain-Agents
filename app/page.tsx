@@ -10,6 +10,8 @@ export default function SignUpPage() {
       window.location.href = "/noah"
     } else if (flowType === "payflow") {
       window.location.href = "/emma"
+    } else if (flowType === "maya") {
+      window.location.href = "/maya"
     }
   }
 
@@ -21,7 +23,7 @@ export default function SignUpPage() {
           <p className="text-gray-300">Select the flow that best fits your needs</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
           {/* TalentFlow Card */}
           <Card
             className="cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg"
@@ -76,6 +78,37 @@ export default function SignUpPage() {
                 onClick={(e) => {
                   e.stopPropagation()
                   handleCardClick("payflow")
+                }}
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </CardContent>
+          </Card>
+
+          {/* LocalFlow Card */}
+          <Card
+            className="cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            style={{ backgroundColor: "#1F2937" }}
+            onClick={() => handleCardClick("maya")}
+          >
+            <CardHeader className="text-center pb-4">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <CardTitle className="text-white text-xl">LocalFlow</CardTitle>
+              <CardDescription className="text-gray-300">
+                Intelligent talent acquisition and candidate management
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="text-center pt-0">
+              <Button
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition-colors"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  handleCardClick("maya")
                 }}
               >
                 Get Started
