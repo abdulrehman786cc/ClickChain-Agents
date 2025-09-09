@@ -130,7 +130,7 @@ export function DashboardHome() {
         {stats.map((stat, index) => {
           const Icon = stat.icon
           return (
-            <Card key={index} className="bg-gray-800 border-gray-700">
+            <Card key={index} className="bg-gray-800 border-gray-700 !py-0 !gap-0">
               <CardContent className="p-3 sm:p-4">
                 <div className="flex items-center justify-between">
                   <div>
@@ -149,7 +149,7 @@ export function DashboardHome() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
         {/* Recent Activity */}
-        <Card className="bg-gray-800 border-gray-700">
+        <Card className="bg-gray-800 border-gray-700 !py-0 !gap-0">
           <CardHeader className="p-3 sm:p-6">
             <CardTitle className="text-gray-100 text-base sm:text-lg">Recent Activity</CardTitle>
           </CardHeader>
@@ -190,7 +190,7 @@ export function DashboardHome() {
         </Card>
 
         {/* Agent Status */}
-        <Card className="bg-gray-800 border-gray-700">
+        <Card className="bg-gray-800 border-gray-700 !py-0 !gap-0">
           <CardHeader className="p-3 sm:p-6">
             <CardTitle className="text-gray-100 text-base sm:text-lg">Agent Status</CardTitle>
           </CardHeader>

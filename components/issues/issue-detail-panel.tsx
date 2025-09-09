@@ -111,7 +111,7 @@ export default function IssueDetailPanel({ issue, onClose, onApprove, onReject }
 
   return (
     <Dialog open={true} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden">
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
         <DialogHeader>
           <div className="flex items-center gap-3">
             <Avatar className="h-10 w-10">
@@ -124,8 +124,8 @@ export default function IssueDetailPanel({ issue, onClose, onApprove, onReject }
               </AvatarFallback>
             </Avatar>
             <div>
-              <DialogTitle className="text-xl">{issue.employeeName}</DialogTitle>
-              <DialogDescription>
+              <DialogTitle className="text-xl text-gray-900 dark:text-white">{issue.employeeName}</DialogTitle>
+              <DialogDescription className="text-gray-600 dark:text-gray-300">
                 Issue ID: {issue.id} • Employee ID: {issue.employeeId}
               </DialogDescription>
             </div>
@@ -135,7 +135,7 @@ export default function IssueDetailPanel({ issue, onClose, onApprove, onReject }
         <ScrollArea className="max-h-[60vh] pr-4">
           <div className="space-y-6">
             {/* Issue Summary */}
-            <Card>
+            <Card className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <AlertTriangle className="h-5 w-5" />
@@ -190,7 +190,7 @@ export default function IssueDetailPanel({ issue, onClose, onApprove, onReject }
             </Card>
 
             {/* Agent Reasoning */}
-            <Card>
+            <Card className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Bot className="h-5 w-5" />
@@ -226,7 +226,7 @@ export default function IssueDetailPanel({ issue, onClose, onApprove, onReject }
             </Card>
 
             {/* RAG Source Documents */}
-            <Card>
+            <Card className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <FileText className="h-5 w-5" />
@@ -249,7 +249,7 @@ export default function IssueDetailPanel({ issue, onClose, onApprove, onReject }
             </Card>
 
             {/* Approval History */}
-            <Card>
+            <Card className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Clock className="h-5 w-5" />
@@ -287,7 +287,7 @@ export default function IssueDetailPanel({ issue, onClose, onApprove, onReject }
             </Card>
 
             {/* Supervisor Decision */}
-            <Card>
+            <Card className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <MessageSquare className="h-5 w-5" />

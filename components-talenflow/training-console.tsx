@@ -116,7 +116,7 @@ export function TrainingConsole() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
         {/* Policies Section */}
-        <Card className="bg-gray-800 border-gray-700 lg:col-span-1">
+        <Card className="bg-gray-800 border-gray-700 lg:col-span-1 !py-0 !gap-0">
           <CardHeader className="p-3 sm:p-6">
             <CardTitle className="text-white text-base sm:text-lg">Hiring Policies</CardTitle>
           </CardHeader>
@@ -156,7 +156,7 @@ export function TrainingConsole() {
         </Card>
 
         {/* Prompt Management */}
-        <Card className="bg-gray-800 border-gray-700 lg:col-span-2">
+        <Card className="bg-gray-800 border-gray-700 lg:col-span-2 !py-0 !gap-0">
           <CardHeader className="p-3 sm:p-6">
             <CardTitle className="text-white mb-3 sm:mb-4 text-base sm:text-lg">Prompt Management</CardTitle>
             <div>
@@ -256,7 +256,7 @@ export function TrainingConsole() {
       </div>
 
       {/* Prompt History */}
-      <Card className="bg-gray-800 border-gray-700">
+      <Card className="bg-gray-800 border-gray-700 !py-0 !gap-0">
         <CardHeader className="p-3 sm:p-6">
           <CardTitle className="text-white text-base sm:text-lg">Prompt History</CardTitle>
         </CardHeader>

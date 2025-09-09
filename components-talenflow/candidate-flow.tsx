@@ -105,7 +105,7 @@ export function CandidateFlow() {
         </div>
       </div>
 
-      <Card className="bg-gray-800 border-gray-700">
+      <Card className="bg-gray-800 border-gray-700 !py-0 !gap-0">
         <CardContent className="p-0">
           {/* Mobile Card View */}
           <div className="block sm:hidden">
@@ -150,13 +150,13 @@ export function CandidateFlow() {
             <Table>
               <TableHeader>
                 <TableRow className="border-gray-700">
-                  <TableHead className="text-gray-300 text-sm">Candidate Name</TableHead>
-                  <TableHead className="text-gray-300 text-sm">Job Matched</TableHead>
-                  <TableHead className="text-gray-300 text-sm">Culture Fit</TableHead>
-                  <TableHead className="text-gray-300 text-sm">Team Fit</TableHead>
-                  <TableHead className="text-gray-300 text-sm">Agent Suggestion</TableHead>
-                  <TableHead className="text-gray-300 text-sm">Status</TableHead>
-                  <TableHead className="text-gray-300 text-sm">Actions</TableHead>
+                  <TableHead className="text-gray-300 text-sm px-4">Candidate Name</TableHead>
+                  <TableHead className="text-gray-300 text-sm px-4">Job Matched</TableHead>
+                  <TableHead className="text-gray-300 text-sm px-4">Culture Fit</TableHead>
+                  <TableHead className="text-gray-300 text-sm px-4">Team Fit</TableHead>
+                  <TableHead className="text-gray-300 text-sm px-4">Agent Suggestion</TableHead>
+                  <TableHead className="text-gray-300 text-sm px-4">Status</TableHead>
+                  <TableHead className="text-gray-300 text-sm px-4">Actions</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -166,9 +166,9 @@ export function CandidateFlow() {
                     className="border-gray-700 hover:bg-gray-750 cursor-pointer"
                     onClick={() => handleCandidateClick(candidate)}
                   >
-                    <TableCell className="text-white font-medium text-sm">{candidate.name}</TableCell>
-                    <TableCell className="text-gray-300 text-sm">{candidate.jobMatched}</TableCell>
-                    <TableCell>
+                    <TableCell className="text-white font-medium text-sm px-4">{candidate.name}</TableCell>
+                    <TableCell className="text-gray-300 text-sm px-4">{candidate.jobMatched}</TableCell>
+                    <TableCell className="px-4">
                       <div className="flex items-center space-x-2">
                         <div className="w-12 h-2 bg-gray-600 rounded-full">
                           <div
@@ -179,12 +179,12 @@ export function CandidateFlow() {
                         <span className="text-white text-sm">{candidate.cultureFit}%</span>
                       </div>
                     </TableCell>
-                    <TableCell className="text-gray-300 text-sm">{candidate.teamFit}</TableCell>
-                    <TableCell className="text-gray-300 max-w-xs truncate text-sm">
+                    <TableCell className="text-gray-300 text-sm px-4">{candidate.teamFit}</TableCell>
+                    <TableCell className="text-gray-300 max-w-xs truncate text-sm px-4">
                       {candidate.agentSuggestion}
                     </TableCell>
-                    <TableCell>{getStatusBadge(candidate.status)}</TableCell>
-                    <TableCell>
+                    <TableCell className="px-4">{getStatusBadge(candidate.status)}</TableCell>
+                    <TableCell className="px-4">
                       <div className="flex space-x-1">
                         <Button size="sm" className="bg-green-600 hover:bg-green-700 h-8 w-8 p-0">
                           <Check className="w-3 h-3" />

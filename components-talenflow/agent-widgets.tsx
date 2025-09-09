@@ -458,7 +458,7 @@ export function AgentWidgets() {
           return (
             <Card
               key={widget.id}
-              className="bg-gray-800 border-gray-700 hover:border-gray-600 transition-colors h-full"
+              className="bg-gray-800 border-gray-700 hover:border-gray-600 transition-colors h-full !py-0 !gap-0"
             >
               <CardHeader className="pb-3 sm:pb-4 p-3 sm:p-6">
                 <CardTitle className="flex items-start space-x-3 text-white">

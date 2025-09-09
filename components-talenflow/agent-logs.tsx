@@ -174,7 +174,7 @@ export function AgentLogs() {
       </div>
 
       {/* Search and Filter Controls */}
-      <Card className="bg-gray-800 border-gray-700 mb-4 sm:mb-6">
+      <Card className="bg-gray-800 border-gray-700 mb-4 sm:mb-6 !py-0 !gap-0">
         <CardContent className="p-3 sm:p-4">
           <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
             <div className="flex-1 relative">
@@ -219,7 +219,7 @@ export function AgentLogs() {
       </Card>
 
       {/* Logs Timeline */}
-      <Card className="bg-gray-800 border-gray-700">
+      <Card className="bg-gray-800 border-gray-700 !py-0 !gap-0">
         <CardHeader className="p-3 sm:p-6">
           <CardTitle className="text-gray-100 text-base sm:text-lg">Activity Timeline</CardTitle>
         </CardHeader>
@@ -275,7 +275,7 @@ export function AgentLogs() {
       </Card>
 
       {/* Active Agents Status */}
-      <Card className="bg-gray-800 border-gray-700 mt-4 sm:mt-6">
+      <Card className="bg-gray-800 border-gray-700 mt-4 sm:mt-6 !py-0 !gap-0">
         <CardHeader className="p-3 sm:p-6">
           <CardTitle className="text-gray-100 text-base sm:text-lg">Active Agent Status</CardTitle>
         </CardHeader>
@@ -294,10 +294,10 @@ export function AgentLogs() {
                   <h4 className="text-gray-100 font-medium text-sm sm:text-base">{agent.name}</h4>
                   <div
                     className={`w-2 h-2 rounded-full ${agent.status === "active"
-                        ? "bg-green-400"
-                        : agent.status === "error"
-                          ? "bg-red-400"
-                          : "bg-gray-400"
+                      ? "bg-green-400"
+                      : agent.status === "error"
+                        ? "bg-red-400"
+                        : "bg-gray-400"
                       }`}
                   />
                 </div>
